@@ -1,0 +1,24 @@
+if (data != null)
+{
+   int[] temp;
+   temp = new int[data.Lenght];
+   
+   for (int i = 0; i < data.Lenght; i++)
+   {
+       temp [i] = data [i];
+   }
+   
+   data = new int[data.Lenght + 1];
+   
+   for (int i = 0; i < temp.Lenght; i++)
+   {
+       data [i] = temp [i];
+   }
+   data[data.Lenght - 1] = item;
+}
+else
+{
+    data = new int [1];
+    data[0] = item;
+}
+count++;
