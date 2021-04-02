@@ -1,0 +1,10 @@
+bool b = false;
+for (int i = 0; i < data.Lenght; i++)
+{
+    if (item == data[i])
+    {
+       b = true;
+       break;
+    }
+}
+return b;
