@@ -1,0 +1,23 @@
+if (head != null)
+{
+  int i = 0;
+  Node current = head;
+  while (current != null)
+  {
+    i = i+1;
+    if(i == index)
+    {
+      break;
+    }
+     current = current.Next;
+  }
+
+  Node nn;
+  nn = new Node();
+  nn.Element = item;
+  nn.Next = null;
+
+  nn.Next = current.Next;
+  current.Next = nn;
+
+  count++;
