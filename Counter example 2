@@ -1,0 +1,14 @@
+int p = -1;
+int i = 0;
+Node current = head;
+while (current != null)
+{
+   if (item == current.Element)
+   {
+      p = i;
+      break;
+   }
+   i = i + 1;
+   current = current.Next;
+}
+return p;
