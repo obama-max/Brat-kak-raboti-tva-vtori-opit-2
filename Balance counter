@@ -1,0 +1,47 @@
+using System;
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            /*StaticVakovskyList vl;
+            vl = new StaticVakovskyList();
+            vl.Add(42);
+
+            /*MyDynamicIntList ml = new MyDynamicIntList();
+            ml.Add(42);
+            ml.Add(3);
+            ml.Add(71);
+            ml.Add(8);
+            ml.Insert(2, 40);
+
+            ml.WriteLine();
+
+            Console.WriteLine(ml.Data[2]);
+            Console.WriteLine(ml.Contains(40));
+            Console.WriteLine(ml.IndexOf(40));*/
+
+            //Console.ReadKey();
+
+
+            double balance, interestRate, targetBalance;
+            Console.WriteLine("What is your current balance?");
+            balance = System.Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("What is your current annual interest rate (in %)?");
+            interestRate = 1 + System.Convert.ToDouble(Console.ReadLine()) / 100.0;
+            Console.WriteLine("What balance would you like to have?");
+            targetBalance = System.Convert.ToDouble(Console.ReadLine());
+            int totalYears = 0;
+
+            do
+            {
+                balance *= interestRate;
+                ++totalYears;
+            }
+            while (balance < targetBalance);
+            Console.WriteLine($"In {totalYears} year{(totalYears == 1 ? "" : "s")} " +$"you'll have a balance of {balance}.");
+            Console.ReadKey();
+        }
+    }
+}
