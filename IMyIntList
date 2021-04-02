@@ -1,0 +1,111 @@
+//Задача:
+//Да се направи интерфейс с основните методи на клас списък за цели числа
+//Глава 16. Линейни структури от данни страница 667
+//Варианти:
+//1. На хартия
+//2. Онлайн. https://dotnetfiddle.net/
+//3. IDE Sharp Develop https://sourceforge.net/projects/sharpdevelop/
+//4. IDE Visual Studio 2017(2019) https://visualstudio.microsoft.com/vs/older-downloads/
+
+using System;
+
+namespace ConsoleApp1
+{
+    interface IMyIntList
+    {
+        void Add(int item);
+        void Insert(int index, int item);
+        void Clear();
+        bool Contains(int item);
+        void Remove(int item);
+        void RemoveAt(int index);
+        int IndexOf(int item);
+    }
+
+    class StaticVakovskyList : IMyIntList
+    {
+        int[] data;
+        int count;
+
+        public void Add(int item)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Clear()
+        {
+            throw new NotImplementedException();
+        } public bool Contains(int item)
+        {
+            throw new NotImplementedException();
+        }
+
+        public int IndexOf(int item)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Insert(int index, int item)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Remove(int item)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void RemoveAt(int index)
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    class DynamicVakovskyList : IMyIntList
+    {
+        class Node
+        {
+            int element;
+            Node next;
+        }
+
+        Node head;
+        Node tail;
+        int count;
+
+        public void Add(int item)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Insert(int index, int item)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Clear()
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool Contains(int item)
+        {
+            throw new NotImplementedException();
+            }
+
+        public void Remove(int item)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void RemoveAt(int index)
+        {
+            throw new NotImplementedException();
+        }
+
+        public int IndexOf(int item)
+        {
+            throw new NotImplementedException();
+        }
+    }
+}
