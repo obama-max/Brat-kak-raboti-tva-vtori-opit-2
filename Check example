@@ -1,0 +1,12 @@
+bool b = false;
+Node current = head;
+while (current != null)
+{
+    if(item == current.Element)
+    {
+       b = true;
+       break;
+    }
+    current = current.Next;
+}
+return b;
