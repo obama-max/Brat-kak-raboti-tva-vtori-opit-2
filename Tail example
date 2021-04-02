@@ -1,0 +1,15 @@
+Node nn;
+nn = new Node();
+nn.Element = item;
+nn.Next = null;
+if (head == null)
+{
+    head = nn;
+    tail = nn;
+}
+else
+{
+    tail.Next = nn;
+    tail = nn;
+}
+count++;
