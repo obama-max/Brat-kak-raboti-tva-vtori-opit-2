@@ -1,0 +1,75 @@
+using System; 
+
+namespace question { 
+ 
+class Queue { 
+    private int[] ele; 
+    private int front; 
+    private int rear; 
+    private int max; 
+
+    public Queue(int size) 
+    { 
+        ele = new int[size]; 
+        front = 0; 
+        rear = -1; 
+        max = size; 
+    } 
+
+    public void enqueue(int item) 
+
+    { 
+        if (rear == max - 1) { 
+            Console.WriteLine("Опашката е препълнена."); 
+            return; 
+        } 
+        else { 
+            ele[++rear] = item; 
+        } 
+    } 
+
+    public int dequeue() 
+    { 
+        if (front == rear + 1) { 
+            Console.WriteLine("Опашката е празна"); 
+            return -1; 
+        } 
+        else { 
+            Console.WriteLine(ele[front] + " махнат от чакалнията"); 
+            int p = ele[front++]; 
+            Console.WriteLine(); 
+            Console.WriteLine("Предната вещ е {0}", ele[front]); 
+            Console.WriteLine("Страничната вещ е {0} ", ele[rear]); 
+            return p; 
+        } 
+    } 
+
+    public void printQueue() 
+    { 
+        if (front == rear + 1) { 
+            Console.WriteLine("Опашката е празна"); 
+            return; 
+        } 
+        else { 
+            for (int i = front; i <= rear; i++) { 
+                Console.WriteLine(ele[i] + " махнат от чакалнията"); 
+            } 
+        } 
+    } 
+} 
+
+
+class Program { 
+    static void Main() 
+    { 
+        Queue Q = new Queue(5); 
+
+        Q.enqueue(10); 
+        Q.enqueue(20); 
+        Q.enqueue(30); 
+        Q.enqueue(40); 
+        Q.printQueue(); 
+        Q.dequeue(); 
+    } 
+} 
+}
